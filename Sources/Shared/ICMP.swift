@@ -69,7 +69,7 @@ enum ICMPType:UInt8{
 @inline(__always) func ICMPPackageCreate(identifier:UInt16, sequenceNumber:UInt16, payloadSize:UInt32)->NSData?
 {
 
-    var packet:String = "\(arc4random()) bottles of beer on the wall sdnwjdn  dskjwebdkjb wekjdnqkjdb wekjdbqewkjdbkjewvb wekjbdkqjwbdkjqbvkj bkjbdkqjwbdkqjwb webdwbeo23oeh08eobqwkjbkjwd bkj2bqkjfbcwkdvbwekj bwkejbdqjkwdbqkjwbc wekjqbfkjqwbdqkjevb wekjbfkj bwekjqwbdkqjbvkjwdb kwbfqhwebd12douc2wevb qbdkjqwbd"
+    let packet:String = "\(arc4random()) bottles of beer on the wall sdnwjdn  dskjwebdkjb wekjdnqkjdb wekjdbqewkjdbkjewvb wekjbdkqjwbdkjqbvkj bkjbdkqjwbdkqjwb webdwbeo23oeh08eobqwkjbkjwd bkj2bqkjfbcwkdvbwekj bwkejbdqjkwdbqkjwbc wekjqbfkjqwbdqkjevb wekjbfkj bwekjqwbdkqjbvkjwdb kwbfqhwebd12douc2wevb qbdkjqwbd"
     
 	// Construct the ping packet.
 	var payload:NSData = NSData(data: packet.data(using: String.Encoding.utf8)!)
@@ -77,7 +77,7 @@ enum ICMPType:UInt8{
 	let package:NSMutableData = NSMutableData(capacity: MemoryLayout<ICMPHeader>.size+payload.length)!
 
 
-	var mutableBytes = package.mutableBytes;
+    let mutableBytes = package.mutableBytes;
     
     let header:ICMPHeader = mutableBytes.assumingMemoryBound(to: ICMPHeader.self).pointee
 

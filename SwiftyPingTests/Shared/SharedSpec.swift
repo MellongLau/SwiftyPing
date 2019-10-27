@@ -1,4 +1,4 @@
-@testable import SwiftPing
+@testable import SwiftyPing
 import Quick
 import Nimble
 
