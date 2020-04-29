@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
   s.name             = "SwiftyPing"
   s.summary          = "SwiftyPing:ICMP Ping in swift"
   s.version          = "1.1.2"
-  s.homepage         = "https://github.com/mchlbowyer/SwiftyPing"
+  s.homepage         = "https://github.com/MellongLau/SwiftyPing"
   s.license          = 'MIT'
   s.author           = { "Ankit Thakur" => "mchlbowyer@gmail.com" }
   s.source           = {
-    :git => "https://github.com/mchlbowyer/SwiftyPing.git",
+    :git => "https://github.com/MellongLau/SwiftyPing.git",
     :tag => s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/mchlbowyer'
